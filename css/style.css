@@ -1,0 +1,305 @@
+/* 
+&display=swap
+&subset=cyrillic-ext 
+*/
+
+/* ОБНУЛЕНИЕ СТИЛЕЙ */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+li {
+    list-style: none;
+}
+a,
+a:visited {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+img {
+    vertical-align: top;
+}
+html,
+body {
+    height: 100%;
+}
+html {
+    font-size: 16px; /* по умолчанию */
+}
+body {
+    line-height: 1;
+}
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    max-width: 1200px;
+    padding: 20px;
+    margin: 0px auto;
+}
+
+/*
+border
+Універсальна властивість border дає змогу одночасно 
+встановити товщину, 
+стиль і колір кордону навколо елемента.
+border: 1px solid #000; (розмір стиль колір)
+Основні стилі - solid dotted dashed dashed double
+
+Синтаксис загальної властивості:
+border: товщина_лінії стиль_лінії колір_лінії
+
+*/
+/*
+outline
+Універсальна властивість, що одночасно встановлює колір, 
+стиль і товщину зовнішньої межі на всіх чотирьох сторонах елемента. 
+На відміну від лінії, що задається через border, властивість outline 
+не впливає на положення блоку та його ширину. 
+Також не можна задати параметри лінії на окремих сторонах елемента, 
+outline застосовується відразу до всіх чотирьох сторін.
+*/
+
+/*
+border-radius
+Встановлює радіус заокруглення куточків блоку.
+border-radius:50%; - кргуг
+Можна використовувати разом з overflow: hidden;
+*/
+
+/*
+box-shadow
+Додає тінь до елемента.
+box-shadow: зсув_по_гориз зсув_по_верт радіус відстань
+Прапор inset для встановлення внутрішньої тіні
+Можна додати багато тіней. На тінь впливає властивість border-radius.
+filter: drop-shadow(0px 0px 10px #77608d);
+*/
+
+/*
+opacity
+Визначає рівень прозорості елемента.
+Відмінність opacity:0; від display:none; в тому що блок 
+не забирається з верстки, а тільки стає прозорим, 
+тобто місце, яке він займає, залишається. Так само, 
+з прозорими елементами все ще можна взаємодіяти, 
+наприклад клікати за посиланнями.
+*/
+/*
+visibility
+Призначений для відображення або приховування елемента.
+Відмінність visibility: hidden; від display:none; в тому що блок 
+не забирається з верстки, а тільки приховується, 
+тобто місце, яке він займає, залишається.
+Відмінність visibility: hidden; від opacity:0;
+у тому що блок приховується і взаємодіяти з ним не можна.
+*/
+/*
+.text-link {
+	color: green;
+	border-bottom: 2px dotted;
+	display: inline-block;
+}
+.text-link:hover {
+	color: red;
+}
+*/
+/*
+.link {
+	display: inline-block;
+	background-color: #794f45;
+	display: inline-block;
+	color: #fff;
+	padding: 15px;
+	border: 5px solid red;
+}
+.link:hover {
+	border: 5px solid transparent;
+}
+*/
+
+/* 
+.block {
+	padding: 20px;
+	margin: 0px 0px 30px 0px;
+}
+.block__title {
+	font-weight: 700;
+	font-size: 30px;
+	margin: 0px 0px 20px 0px;
+}
+.block__body {
+}
+*/
+/*
+vertical-align - вирівнює рядкові 
+і блочно-рядкові об'єкти по вертикалі
+top - по верху
+middle - по центру
+bottom - по низу
+*/
+
+/*
+Схлопування зовнішнього відступу відбувається 
+тільки з блоковими об'єктами
+*/
+
+.div {
+    font-size: 20px;
+    max-width: 400px;
+    margin: 0px auto 20px;
+    padding: 20px;
+}
+.div1 {
+    background-color: #ff4646;
+    border: 5px solid #000;
+    text-decoration: underline;
+    opacity: 0.9;
+}
+.div2 {
+    background-color: #e9cd30;
+    border: 5px dotted #000;
+    text-decoration: line-through;
+    opacity: 0.8;
+}
+.div3 {
+    background-color: #7fe61f;
+    border: 5px dashed #000;
+    text-decoration: overline;
+    opacity: 0.7;
+}
+.div4 {
+    background-color: #14c2e0;
+    border: 5px solid #000;
+    text-transform: uppercase;
+    opacity: 0.6;
+}
+.div5 {
+    background-color: #0e12f8;
+    text-transform: lowercase;
+    opacity: 0.5;
+}
+.div6 {
+    background-color: #ee0ac8;
+    text-transform: capitalize;
+    opacity: 0.4;
+	outline: 50px solid #7fe61f;
+}
+.div7 {
+    background-color: #15ff00;
+    font-weight: bold;
+    opacity: 0;
+    display: block;
+}
+.div8 {
+    background-color: #ff9900;
+    font-weight: 900;
+    opacity: 0.7;
+	border: 5px solid #7fe61f;
+}
+.div8:hover {
+	border: 5px solid transparent;
+}
+.div9 {
+    background-color: #f34949;
+    font-style: italic;
+    color: #000;
+    border-left: 5px dashed #14c2e0;
+    border-right: 15px double #14c2e0;
+    border-bottom: 5px dotted #14c2e0;
+    border-top: 5px solid #14c2e0;
+}
+.div10 {
+    background-color: #1f92fd;
+    font-style: oblique;
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.div11 {
+    overflow: hidden;
+    background-color: #ff9900;
+    border-radius: 26% 74% 0% 89% / 27% 80% 25% 73%;
+}
+.div12 {
+    overflow: hidden;
+    background-color: #ff9900;
+    border-radius: 95% 0% 35% 65% / 8% 38% 62% 92%;
+}
+.div13 {
+    overflow: hidden;
+    background-color: #ff9900;
+    border-radius: 31% 69% 23% 77% / 66% 18% 82% 34%;
+}
+.div14 {
+    overflow: hidden;
+    background-color: #ff9900;
+    border-radius: 50% 50% 0% 50%;
+}
+
+.link {
+    font-size: 30px;
+    text-shadow: 5px 5px 5px#0e12f8;
+    display: block;
+}
+.span {
+    display: block;
+    font-size: 20px;
+    max-width: 400px;
+    margin: 0px auto 20px;
+    padding: 20px;
+    box-shadow: 5px 5px 5px #0e12f8;
+    background-color: #1b3dac;
+    border: 5px solid #000;
+    text-decoration: underline;
+}
+.div16 {
+    margin: 0px auto 50px;
+    background-color: #1f92fd;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+        rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+        rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.div15 {
+    display: block;
+    margin: 50px auto 50px;
+    background-color: #1f92fd;
+    box-shadow: blue 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px,
+        rgb(31, 193, 27) 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px,
+        rgb(255, 217, 19) 20px -20px, rgb(255, 255, 255) 30px -30px 0px -3px,
+        rgb(255, 156, 85) 30px -30px, rgb(255, 255, 255) 40px -40px 0px -3px,
+        rgb(255, 85, 85) 40px -40px;
+}
+.div17 {
+    margin: 0px auto 50px;
+    background-color: rgba(240, 46, 170, 0.5);
+    box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px,
+        rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px,
+        rgba(240, 46, 170, 0.05) -25px 25px;
+}
+.div18 {
+    margin: 0px auto 50px;
+    background-color: #1f92fd;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+        rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+        rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+        rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+        rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+		
+}
